@@ -1,0 +1,105 @@
+
+
+:root {
+  --colorc:linear-gradient(to right bottom,#af4eeb,#3622e6);;
+  --color1:linear-gradient(to right bottom,#eb984e,#bfe622); ;
+  --color2:linear-gradient(to right bottom,#754eeb,#d922e696) ;
+  --color3:linear-gradient(to right bottom,#111110,#22e6ab) ;
+  --color4:linear-gradient(to right bottom,#e3eb4e,#e622ab) ;
+  --color5:linear-gradient(to right bottom,#eb4e880e,#22e6dc);
+  --color6:linear-gradient(to right bottom,#120b05,#e62291);
+}
+
+.hero{
+  height:900px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.DC-Section{
+  display: flex;
+}
+
+.number{
+  font-weight: 600;
+}
+.change{
+  color: blue;
+}
+.newCall{
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.inputnum{
+  
+  font-size: 40px;
+  font-weight:700
+}
+.input-case{
+  margin-top: 50px;
+}
+
+.circles{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+ .circle-1, .circle-2, .circle-3, .circle-4, .circle-5, .circle-6, .circle
+{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  font-weight:700
+}
+.circle{
+  background-image: var(--colorc);
+}
+.circle-1{
+  background-image: var(--color1);
+}
+.circle-2{
+  background-image: var(--color2);
+}
+.circle-3{
+  background-image: var(--color3);
+}
+.circle-4{
+  background-image: var(--color4);
+}
+.circle-5{
+  background-image: var(--color5);
+}
+.circle-6{
+  background-image: var(--color6);
+}
+           
+                .grid-container {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr;
+                  background-color: white;
+                 padding: 30px;
+                 margin-top: 30px;
+                 
+                }
+                .grid-item {
+                  background-color: rgba(255, 255, 255, 0.8);
+                  font-size: 30px;
+                  text-align: center;
+                  color: #2b5beca4;
+                }       
+.letters{
+  font-size: 15px;
+  line-height: 10px;
+}  
+
