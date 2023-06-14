@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './App.css'
 import { useState } from 'react';
 
@@ -63,6 +62,9 @@ function handleDial(e){
      
     </div>
 
+    
+    
+
 <div className='circles'>
  
        <div className='circle-1'>P </div>
@@ -88,6 +90,15 @@ function handleDial(e){
   <div class="grid-item" onClick={() => handleDial(0)}>0<br/><span className='letters'>+</span></div>  
   <div class="grid-item" onClick={() => handleDial('#')}>#<br/><span className='letters'></span></div>  
 </div>
+
+ 
+
+
+
+
+
+ 
+
 
 
     </div>
