@@ -1,40 +1,24 @@
 import React from 'react'
-import ReactDom from 'react-dom';
+
 import './App.css'
 import { useState } from 'react';
-import IconButton from "@material-ui/core/IconButton";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import SearchIcon from "@material-ui/icons/Search";
-import { TextField  } from '@material-ui/core';
 
 
 
+export default function Dailer () {
 
-
-
-
-
-
-
-
-export default function Dailer() {
-
-const[searchterm,setSearchTerm]=React.useState('')
-const [dialNumber, setDialNumber] = useState('');
-const [showResults, setShowResults] = useState(false);
-
-   const handleSearch = (e) => {
-     setSearchTerm(e.target.value);
-   };
-
-
-   const handleDial = (number) => {
-    
+const [searchterm, setSearchTerm] = useState('');
+// const [showResults, setShowResults] = useState(false);
    
-    setSearchTerm((prevDialNumber) =>prevDialNumber + number);
 
-  };
+function handleSearch(e){
+setSearchTerm(e.target.value);
+}
 
+
+function handleDial(e){
+     console.log(e);
+}
 
   return (
     <>
@@ -63,41 +47,21 @@ const [showResults, setShowResults] = useState(false);
 
 </div>
 
-  <div>
+  <div className='formargin'>
      <p>Your Caller ID Displays as <span className='number'>(202)944-6641</span> <span className='change'>.Change</span></p>
    </div>
 
 
-     <div className='input-case'>
-            {/* <input className='inputnum' type='text' placeholder='type a name or number'  ></input>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+     <div className='box'>
+
+     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-            </svg> */}
+            </svg> 
 
 
-<TextField
- style={{ width:700 ,fontSize:100 }}
-placeholder='type name or a number'
- value={searchterm}
- onChange={handleSearch}
-
-InputProps={{
-  startAdornment: (
-    <InputAdornment>
-      <IconButton>
-        <SearchIcon style={{ width:50 ,height:50 }} />
-      </IconButton>
-    </InputAdornment>
-
-  )
-}}
-/>
-
+            <input className='inputnum' type='text' placeholder='type a name or number'   value={searchterm}   onChange={handleSearch}   ></input>
+     
     </div>
-
-    {/* <div> {dialNumber}</div>
-      <div>{searchterm}</div> */}
-    
 
 <div className='circles'>
  
@@ -107,11 +71,12 @@ InputProps={{
        <div className='circle-4'># </div>
         <div className='circle-5'>U </div>
        <div className='circle-6'>RR</div>
+       
 </div>
     
 <div class="grid-container">
   <div class="grid-item" onClick={() => handleDial(1)}>1<br/><span className='letters'></span></div>
-  <div class="grid-item" onClick={() => handleDial(2 ,'ABC')}>2<br/><span className='letters'>ABC</span></div>
+  <div class="grid-item" onClick={() => handleDial(2)}>2<br/><span className='letters'>ABC</span></div>
   <div class="grid-item" onClick={() => handleDial(3)}>3<br/><span className='letters'>DEF</span></div>  
   <div class="grid-item"onClick={() => handleDial(4)}>4<br/><span className='letters'>GHI</span></div>
   <div class="grid-item"onClick={() => handleDial(5)}>5<br/><span className='letters'>JKL</span></div>
@@ -123,15 +88,6 @@ InputProps={{
   <div class="grid-item" onClick={() => handleDial(0)}>0<br/><span className='letters'>+</span></div>  
   <div class="grid-item" onClick={() => handleDial('#')}>#<br/><span className='letters'></span></div>  
 </div>
-
- 
-
-
-
-
-
- 
-
 
 
     </div>
